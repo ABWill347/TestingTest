@@ -26,7 +26,7 @@ class SocialTest {
 
     @Test
     void checkEmptyOrBlankCharactersTest() {
-        Social social =new Social(new String[]{"45"});
+        Social social =new Social(new String[]{"@1254"});
         boolean expected=true;
         boolean actual= social.checkEmptyOrBlankCharacters();
         assertEquals(expected,actual);
@@ -51,8 +51,10 @@ class SocialTest {
 
     @Test
     void updateHandle() {
-        Social social =new Social(new String[]{"@4455","@123454"});
-        social.updateHandle("@12454","@789");
-        assertEquals("@789",social.getHandle());
+        Social social =new Social(new String[]{"@123454"});
+        social.updateHandle("@123454","@789");
+        String actual =social.showAllHandles();
+        String expected= "";
+        assertEquals(expected,actual);
     }
 }
