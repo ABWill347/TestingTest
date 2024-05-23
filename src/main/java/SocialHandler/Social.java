@@ -45,6 +45,21 @@ public class Social {
     }
     public void addHandle(String newHandle){
         handle.add(newHandle);
+    }
+    public void removeHandle(String oldHandle){
+        handle.remove(oldHandle);
+    }
+    public void updateHandle(String oldHandle,String newHandle){
+        int index=handle.indexOf(oldHandle);
+        if(index!=-1){
+            handle.set(index,newHandle);
+        }
 
+    }
+    public String showAllHandles(){
+        for ( String h :handle){
+            System.out.println(h);
+        }
+        return "";
     }
 }
